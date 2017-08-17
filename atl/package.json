@@ -1,0 +1,38 @@
+{
+  "name": "Any Time Library",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "lite-server -c=bs-config.json",
+    "build": "tsc -p portal/",
+    "build:watch": "tsc -p portal/ -w",
+    "prestart": "npm run build",
+    "start": "concurrently \"npm run build:watch\" \"npm run serve\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@angular/animations": "^4.3.4",
+    "@angular/common": "^4.3.4",
+    "@angular/compiler": "^4.3.4",
+    "@angular/core": "^4.3.4",
+    "@angular/forms": "^4.3.4",
+    "@angular/http": "^4.3.4",
+    "@angular/platform-browser": "^4.3.4",
+    "@angular/platform-browser-dynamic": "^4.3.4",
+    "@angular/platform-server": "^4.3.4",
+    "@angular/router": "^4.3.4",
+    "@types/angular": "^1.6.29",
+    "bootstrap": "^3.3.7",
+    "concurrently": "^3.5.0",
+    "core-js": "^2.5.0",
+    "jquery": "^3.2.1",
+    "lite-server": "^2.3.0",
+    "rxjs": "^5.4.3",
+    "systemjs": "^0.20.17",
+    "zone.js": "^0.8.16"
+  },
+  "devDependencies": {},
+  "description": ""
+}
