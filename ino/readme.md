@@ -37,7 +37,7 @@ tslint --init
     tsc --init
 ```
 
-6. bs-config.json configuration
+5. bs-config.json configuration
 
 ```
     {
@@ -50,7 +50,7 @@ tslint --init
     }
 ```
 
-7. package.json scripts configuration
+6. package.json scripts configuration
 
 ```
     "serve": "lite-server -c=bs-config.json",
