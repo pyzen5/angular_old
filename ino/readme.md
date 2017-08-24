@@ -1,6 +1,8 @@
 1. initialize npm configurations
 
-    npm init --force
+```
+npm init --force
+```
 
 2. initialize tslint configuration
 
