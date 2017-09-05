@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Http, Response, Headers, RequestOptions, URLSearchParams } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs/Rx';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+import 'rxjs/add/operator/catch';
 
 import { AppBook } from '../model/app.book';
 
@@ -19,7 +20,17 @@ export class BookService {
         });
     this.options = new RequestOptions({ headers: this.headers });
   }
-  
+  private isbndburl = 'http://isbndb.com/api/v2/json/LWEDB8PK/book/9780849303159'; 
+
+  getBooks() : Observable<any> {   
+             
+             return this.http.get(this.isbndburl)
+                            // ...and calling .json() on the response to return data
+                             .map((res:Response) => res.json())
+                             //...errors if any
+                             .catch((error:any) => Observable.throw(error.json().error || 'Server error'));
+    
+  }
   getAllBooks(){
     let people$ = this.http
       .request('../data/books.json')
