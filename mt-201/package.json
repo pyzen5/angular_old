@@ -2,7 +2,7 @@
   "name": "any-time-library",
   "version": "1.0.0",
   "private": true,
-  "description": "Mindtree 201 project",
+  "description": "My project",
   "scripts": {
     "test:once": "karma start karma.conf.js --single-run",
     "build": "tsc -p src/",
